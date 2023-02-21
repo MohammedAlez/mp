@@ -1,0 +1,424 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --font-color:#e91e63;
+    --black-color:black;
+    --fff-color:#fff;
+    --bg-color:#000000f7;
+
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding-inline: 20px;
+}
+body{
+    /* background-color: var(--bg-color); */
+    position: relative;
+}
+
+
+/* start header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0e0e0e;
+    background-color: #0e0e0e;
+    z-index:99;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+nav.menu{
+    position: fixed;
+    width: 350px;
+    background: #100f0f;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    justify-content: space-between;
+}
+.logo a{
+    
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: end;
+}
+.logo a span{
+    font-family: 'Lobster', cursive;
+    color: var(--fff-color);
+    font-size: 20px;
+}
+.logo a span:last-child{
+    margin-top: -7px;
+}
+.burgerBtn{
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--fff-color);
+}
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.144);
+}
+.overlay.active{
+    left: 0;
+}
+nav.menu.active{
+    left: 0;
+}
+.closeBtn{
+    text-align: end;
+}
+.closeBtn i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: .3s;
+}
+.closeBtn i:hover{
+    background: #242121;
+}
+.links{
+    margin-block: 35px;
+    list-style: none;
+}
+.links a{
+    text-decoration: none;
+    color: var(--fff-color);
+    font-size: 22px;
+    display: block;
+    padding-block: 7px;
+    transition: .3s;
+}
+.links a.active{
+    color: #046ec3
+}
+.links a:hover{
+    padding-left: 10px;
+    color: #046ec3;
+}
+.social-links{
+    padding: 10px;
+}
+.social-links a{
+    display: inline-block;
+    padding: 5px;
+    margin-inline: 5px;
+    color: var(--fff-color);
+    font-size: 18px;
+    transition: .3s;
+}
+.social-links a:hover{
+    transform: scale(1.2);
+}
+@media (min-width:749px){
+    nav.menu{
+        transition: 0s;
+    }
+}
+@media (min-width:750px) {
+    nav.menu{
+        display:flex;
+        flex-direction: row;
+        gap: 30px;
+        position: relative;
+        width: fit-content;
+        height: auto;
+        left: 0;
+        top: 0;
+        padding: 0;
+        background-color: transparent;
+        transition: .3s;
+    }
+    nav.menu .social-links{
+        display: block;
+        padding: 0;
+    }
+    nav.menu .closeBtn{
+        display: none;
+    }
+    nav.menu .links{
+        display: flex;
+        gap: 12px;
+        margin: 0;
+    }
+    nav.menu .links a{
+        font-size: 16px;
+        color: var(--fff-color);
+        font-weight: 500;
+        padding-inline: 10px;
+    }
+    nav.menu .links a:hover{
+        transform: scale(1.1);
+        padding-left:10px ;
+        color: #046ec3;
+    }
+    nav.menu .links a.active{
+        color: #046ec3;
+
+    }
+    .burgerBtn{
+        display: none;
+    }
+}
+@media (max-width:751px){
+    /* nav.menu{
+        transition: 0s;
+    } */
+}
+/* end header */
+
+/* ----------------- */
+
+/* start landing */
+.landing{
+    background: radial-gradient(#020000 30% , #000000);
+    background: radial-gradient(#020000 30% , #000000);
+}
+.landing .container{
+    min-height: 100vh;
+    /* width: 100%; */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.landing .container .info{
+    padding:20px;
+}
+.landing .container .image{
+    height: 300px;
+    background-color: red;
+    width: 300px;
+}
+.landing .container h1{
+    color: #fff;
+}
+.landing .container h1:nth-child(1){
+    font-size: 60px;
+    color: #046ec3;
+}
+.landing .container h1:nth-child(2){
+    color: var(--fff-color);
+    font-size: 40px;
+}
+.landing .container h1:nth-child(3){
+    font-size: 30px;
+    color: #c5c5c580;
+    margin-top: 13px;
+}
+.landing .container .info a{
+    display: block;
+    width: fit-content;
+    padding: 15px;
+    border: 2px solid #046ec3;
+    color: #046ec3;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-block: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+.landing .container .info a:hover{
+    background-color: #046ec3 ;
+    color: var(--fff-color);
+}
+@media (min-width:850px){
+    .landing .container{
+        flex-direction: row;
+        padding: 0 20px;
+    }
+    .landing .container .info,
+    .landing .container .image{
+        flex:1;
+    }
+}
+/* end landing */
+
+
+/* start works */
+.OurWorks{
+    padding-block: 100px;
+    background-color: #000000f2;
+}
+
+.mainHeading{
+    margin: auto;
+    width: fit-content;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 100px;
+    color:var(--fff-color)
+}
+.mainHeading .this{
+    position: relative;
+}
+.mainHeading .this::before{
+    position: absolute;
+    content:"";
+    width:100% ;
+    height: 4px;
+    background-color: #046ec3;
+    bottom: -6px;
+    transform: rotate(-4deg);
+}
+.OurWorks .container{
+    min-height:100vh;
+}
+.workContent{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.workContent .box{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.workContent .box::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:  transparent;
+    transition: 0.3s;
+}
+.workContent .box:hover::before{
+    background-color: #00000091;
+}
+.workContent .box img{
+    width: 100%;
+}
+.workContent .box .preview{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.workContent .box .preview a{
+    display: block;
+    font-size: 30px;
+    color: #000000c2;
+}
+.workContent .box:hover .preview{
+    display:flex
+}
+@media (min-width:700px){
+    .workContent .box{
+        width: calc(97% / 2);
+    }
+}
+/* end works */
+
+/* start contact */
+.contact{
+    padding-block: 100px;
+    background: #000000eb;
+}
+.contact form{
+    width: 100%;
+    margin: auto;
+    background: #1e1d1d;
+    padding: 20px;
+    border-radius: 11px;
+}
+.contact form input:not(:last-of-type),
+.contact form textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 20px;
+    margin-block: 10px;
+    border-radius: 10px;
+    background: #a2a2bf1c;
+    color: var(--fff-color);
+    font-weight: 600;
+    resize: none;
+}
+.contact textarea{
+    min-height: 200px;
+}
+.contact form input[type=submit]{
+    margin-inline: auto;
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: var(--fff-color);
+    background-color: #046ec3; 
+    font-weight: bold;
+    border-radius: 24px;   
+    cursor:pointer;
+}
+@media (min-width:550px){
+    .contact form{
+        width: 540px;
+    }
+}
+/* end contact */
+/* footer */
+footer{
+    text-align: center;
+    background-color: #046dc3;
+    padding: 20px;
+    color: var(--fff-color);
+    font-weight: bold;
+}
+/* footer */
+/* animation reveal */
+[data-reveal]{
+    opacity: 0;
+    transition: 1s;
+}
+[data-reveal="top"]{
+    transform: translateY(30px);
+}
+[data-reveal="bottom"]{
+    transform: translateY(-30px);
+}
+[data-reveal="left"]{
+    transform: translateX(30px);
+}
+[data-reveal="right"]{
+    transform: translateX(-30px);
+}
+[data-reveal].revealed{
+    opacity: 1;
+    transform: translate(0);
+}
+/* animation reveal */
